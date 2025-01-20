@@ -1,0 +1,107 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+} /* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Heading styling */
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Class selection styling */
+.class-selection {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.class-selection select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.class-selection button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(162, 107, 244);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.class-selection button:hover {
+  background-color: rgb(123, 69, 203);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Submit button styling */
+#submitAttendanceButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(162, 107, 244);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submitAttendanceButton:hover {
+  background-color: rgb(123, 69, 203);
+}
+
+/* Confirmation Message */
+#confirmationMessage {
+  color: green;
+  font-size: 16px;
+  margin-top: 20px;
+}

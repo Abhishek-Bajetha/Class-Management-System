@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/*landing page*/
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+  gap: 50px;
+}
+.nav {
+  height: 7vh;
+  width: 95%;
+  background-color: rgb(137, 19, 255);
+  border-radius: 5px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  padding: 0 15px;
+}
+.nav .img {
+  font-size: 10px;
+  height: 45px;
+  width: 45px;
+  border-radius: 25px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .img img {
+  height: 30px;
+  width: 30px;
+}
+.nav .usersname {
+  padding-right: 10%;
+  font-weight: 600;
+}
+
+.nav .paneltype {
+  position: absolute;
+  right: 25px;
+}
+
+/* landing page */
+
+.main .landing {
+      width: 100%;
+      /*padding: 0 2%;*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
+
+.landing .options {
+  width:100%;
+  display: flex;
+   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.landing .options .selectclass {
+  height: 36vh;
+  width: 15vw;
+  margin-right: 1vw;
+  background-color: rgb(162, 107, 244);
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+.landing .options .selectclass h2 {
+  color: white;
+}
+.landing .options .selectclass .batch {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.landing .options .features {
+  height: 35vh;
+  width: 22vw;
+  background-color: rgb(162, 107, 244);
+  margin: 10px;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 20px;
+  padding: 20px 10px;
+}
+.landing .options .features:hover {
+  /* scale: 1.01; */
+  /* transition: 0.09s; */
+  transform: scale(1.05);
+  background-color: rgb(123, 69, 203);
+  /* box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3); */
+}
+.landing .options .features:active {
+  scale: 0.99;
+  transition: 0.01s;
+}
+.landing .options .features .logo {
+  height: 20vh;
+  width: 21vw;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing .options .features .detail {
+  width: 75%;
+  font-size: 15px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.59);
+}
+
+.landing .options .features .logo img {
+  height: 95px;
+  width: 95px;
+}

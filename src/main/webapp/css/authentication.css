@@ -1,0 +1,91 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Authentication Container */
+.auth-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+/* Form Styling */
+.auth-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-form label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+}
+
+.auth-form input, .auth-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.auth-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+.auth-form button {
+    background-color: rgb(162, 107, 244);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+    background-color: rgb(123, 69, 203);
+}
+
+/* Toggle Question */
+#toggleQuestion {
+    font-size: 14px;
+    color: #444;
+    margin-top: 10px;
+}
+
+#toggleQuestion a {
+    color: rgb(162, 107, 244);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#toggleQuestion a:hover {
+    text-decoration: underline;
+    color: rgb(123, 69, 203);
+}
+
+/* Visibility Control*/
+.hidden {
+    display: none;
+}
