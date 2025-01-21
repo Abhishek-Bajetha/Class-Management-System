@@ -1,3 +1,4 @@
+<%@ page import="java.sql.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,13 +19,34 @@
             <label for="classStandard">Select Class Standard:</label>
             <select name="classStandard" id="classStandard" required>
                 <option value="">-- Select Class --</option>
-                <option value="6th">6th</option>
-                <option value="7th">7th</option>
-                <option value="8th">8th</option>
-                <option value="9th">9th</option>
-                <option value="10th">10th</option>
-                <option value="11th">11th</option>
-                <option value="12th">12th</option>
+            <%
+            try{
+               Class.forName("com.mysql.cj.jdbc.Driver");
+
+               String url = "jdbc:mysql://localhost:3306/classmanagementsystem";
+               String user = "root";
+               String password = "Abhi73022@";
+
+               String query = "SELECT classname FROM classes WHERE teacherid = ?;";
+
+               Connection connection = DriverManager.getConnection(url, user, password);
+               String teacherId = (String) session.getAttribute("teacherId");
+               PreparedStatement preparedStatement = connection.prepareStatement(query);
+               preparedStatement.setString(1, teacherId);
+               ResultSet resultSet = preparedStatement.executeQuery();
+
+
+               while (resultSet.next()) {
+               String className = resultSet.getString("classname");
+               %>
+               <option value="<%= className %>"><%= className %></option>
+               <%
+               }
+               }catch(Exception e){
+                           throw new RuntimeException(e);
+
+               }
+            %>
             </select>
 
             <!-- Select Time Slot -->
@@ -46,24 +68,9 @@
             <button type="submit" id="scheduleButton">Schedule Class</button>
         </form>
 
-        <div id="confirmationMessage" class="hidden">
-            <p>Your class has been scheduled successfully!</p>
-        </div>
+        <!--<div id="confirmationMessage" class="hidden">-->
+           <!-- <p>Your class has been scheduled successfully!</p>-->
+       <!-- </div>-->
     </div>
-
-    <script>
-        document.getElementById("scheduleButton").addEventListener("click", function(e) {
-            e.preventDefault(); // Prevent form submission
-            const classStandard = document.getElementById("classStandard").value;
-            const timeSlot = document.getElementById("timeSlot").value;
-
-            if(classStandard && timeSlot) {
-                document.getElementById("confirmationMessage").classList.remove("hidden");
-                document.getElementById("confirmationMessage").innerHTML = `<p>Class ${classStandard} is scheduled for ${timeSlot} tomorrow.</p>`;
-            } else {
-                alert("Please select both class standard and time slot.");
-            }
-        });
-    </script>
 </body>
 </html>

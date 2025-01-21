@@ -20,7 +20,7 @@
         </div>
         <div class="usersname">
         <%
-        // Accessing the session attribute to display the user's name
+        // Accessing the session attribute to display the users name
         String userName = (String) session.getAttribute("userName");
         out.print(userName);
         %>
@@ -43,7 +43,7 @@
               </div>
             </a>
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/addBatch.jsp"
+              href="<%=application.getContextPath() %>/addBatch.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="featuretext">Batch</div>
@@ -55,7 +55,7 @@
           </div>
           <div class="features">
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/editstudents.jsp"
+              href="<%=application.getContextPath() %>/editstudents.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="logo">
@@ -66,7 +66,7 @@
               </div>
             </a>
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/editstudents.jsp"
+              href="<%=application.getContextPath() %>/editstudents.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="featuretext">Modify students</div>
@@ -77,7 +77,7 @@
           </div>
           <div class="features">
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/scheduleClass.jsp"
+              href="<%=application.getContextPath() %>/scheduleClass.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="logo">
@@ -85,7 +85,7 @@
               </div>
             </a>
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/scheduleClass.jsp"
+              href="<%=application.getContextPath() %>/scheduleClass.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="featuretext">Schedule class</div>
@@ -98,7 +98,7 @@
 
           <div class="features">
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/attendanceTaker.jsp"
+              href="<%=application.getContextPath() %>/attendanceTaker.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="logo">
@@ -109,7 +109,7 @@
               </div>
             </a>
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/attendanceTaker.jsp"
+              href="<%=application.getContextPath() %>/attendanceTaker.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="featuretext">Attendance</div>
@@ -123,7 +123,7 @@
            <div class="options">
           <div class="features">
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/uploadNotes.jsp"
+              href="<%=application.getContextPath() %>/uploadNotes.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="logo">
@@ -134,7 +134,7 @@
               </div>
             </a>
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/uploadNotes.jsp"
+              href="<%=application.getContextPath() %>/uploadNotes.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="featuretext">Upload notes</div>
@@ -146,7 +146,7 @@
 
           <div class="features">
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/assignments.jsp"
+              href="<%=application.getContextPath() %>/assignments.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="logo">
@@ -157,7 +157,7 @@
               </div>
             </a>
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/assignments.jsp"
+              href="<%=application.getContextPath() %>/assignments.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="featuretext">Upload Assignment</div>
@@ -170,7 +170,7 @@
 
           <div class="features">
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/uploadMarks.jsp"
+              href="<%=application.getContextPath() %>/uploadMarks.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="logo">
@@ -181,7 +181,7 @@
               </div>
             </a>
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/uploadMarks.jsp"
+              href="<%=application.getContextPath() %>/uploadMarks.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="featuretext">Upload marks</div>
@@ -193,7 +193,7 @@
           </div>
           <div class="features">
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/noticeAnnouncement.jsp"
+              href="<%=application.getContextPath() %>/noticeAnnouncement.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="logo">
@@ -204,7 +204,7 @@
               </div>
             </a>
             <a
-              href="<%=application.getContextPath() %>/teacher's-Dash/noticeAnnouncement.jsp"
+              href="<%=application.getContextPath() %>/noticeAnnouncement.jsp"
               style="text-decoration: none; color: white; font-weight: 800"
             >
               <div class="featuretext">Notice</div>

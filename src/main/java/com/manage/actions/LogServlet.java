@@ -27,12 +27,17 @@ public class LogServlet extends HttpServlet {
         try {
             PrintWriter printWriter = resp.getWriter();
             resp.setContentType("text / html");
+
+
+            /*DB connection*/
             String query = "SELECT * FROM users WHERE email=? AND password=?;";
             Connection connection = DB.createConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
             ResultSet resultSet = preparedStatement.executeQuery();
+
+
             resultSet.next();
             System.out.println(resultSet.getString("name"));
             System.out.println(resultSet.getString("role"));
@@ -40,6 +45,7 @@ public class LogServlet extends HttpServlet {
             if (Objects.equals(resultSet.getString("role"), "teacher")) {
                 HttpSession session = req.getSession();
                 session.setAttribute("userName", resultSet.getString("name"));
+                session.setAttribute("teacherId", resultSet.getString("userid"));
                 RequestDispatcher rs = req.getRequestDispatcher("teacher_Dashboard.jsp");
                 rs.forward(req, resp);
             } else if (Objects.equals(resultSet.getString("role"), "student")) {

@@ -11,19 +11,18 @@
             <h2>Create New Class/Batch</h2>
 
             <!-- Form to Create New Class -->
-            <form action="/addBatch" method="post" id="createClassForm">
+            <form action="AddBatch" method="POST" id="createClassForm">
                 <label for="className">Class/Batch Name:</label>
                 <input type="text" id="className" name="className" placeholder="Enter class or batch name" required>
 
                 <label for="className">Class/Batch Code:</label>
-                <input type="text" id="className" name="classCode" placeholder="Enter class or batch code" required>
+                <input type="text" id="classCode" name="classCode" placeholder="Enter class or batch code" required>
 
                 <label for="classDescription">Description (Optional):</label>
                 <textarea id="classDescription" name="classDescription" placeholder="Provide a brief description (optional)"></textarea>
 
                 <button type="submit">Create Class</button>
             </form>
-
         </div>
   </body>
 </html>
