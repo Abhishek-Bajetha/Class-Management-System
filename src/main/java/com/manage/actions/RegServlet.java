@@ -20,11 +20,13 @@ public class RegServlet extends HttpServlet {
 
         String name = req.getParameter("name");
         String role = req.getParameter("role");
-        String instituteName = req.getParameter("instituteName");
+        String iName = req.getParameter("instituteName");
         String email = req.getParameter("email");
         String password = req.getParameter("password");
 
-        String userid = role + "_" + instituteName;
+
+        String instituteName = iName.replaceAll("\\s", "_");
+        String userid = role + "_" + email;
         System.out.println(name + "\n" + role + "\n");
         System.out.println(instituteName + "\n");
         System.out.println(email + "\n" + password);

@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <h2>Schedule Tomorrow's Class</h2>
-        <form action="javascript:void(0);" method="POST">
+        <form action="NextClass" method="POST">
             <!-- Select Class Standard -->
             <label for="classStandard">Select Class Standard:</label>
             <select name="classStandard" id="classStandard" required>
@@ -27,7 +27,7 @@
                String user = "root";
                String password = "Abhi73022@";
 
-               String query = "SELECT classname FROM classes WHERE teacherid = ?;";
+               String query = "SELECT * FROM classes WHERE teacherid = ?;";
 
                Connection connection = DriverManager.getConnection(url, user, password);
                String teacherId = (String) session.getAttribute("teacherId");
@@ -38,8 +38,9 @@
 
                while (resultSet.next()) {
                String className = resultSet.getString("classname");
+               String classCode = resultSet.getString("classcode");
                %>
-               <option value="<%= className %>"><%= className %></option>
+               <option value="<%= classCode %>"><%= className %></option>
                <%
                }
                }catch(Exception e){

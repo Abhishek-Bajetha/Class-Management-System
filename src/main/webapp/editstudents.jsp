@@ -27,7 +27,7 @@
                                String user = "root";
                                String password = "Abhi73022@";
 
-                               String query = "SELECT classname FROM classes WHERE teacherid = ?;";
+                               String query = "SELECT * FROM classes WHERE teacherid = ?;";
 
                                Connection connection = DriverManager.getConnection(url, user, password);
                                String teacherId = (String) session.getAttribute("teacherId");
@@ -37,8 +37,9 @@
 
                                while (resultSet.next()) {
                                String className = resultSet.getString("classname");
+                               String classcode = resultSet.getString("classcode");
                                %>
-                               <option value="<%= className %>"><%= className %></option>
+                               <option value="<%= classcode %>"><%= className %></option>
                                <%
                                }
                                }catch(Exception e){

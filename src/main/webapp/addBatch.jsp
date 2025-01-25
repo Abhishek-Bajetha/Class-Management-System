@@ -9,7 +9,6 @@
   <body>
         <div class="container">
             <h2>Create New Class/Batch</h2>
-
             <!-- Form to Create New Class -->
             <form action="AddBatch" method="POST" id="createClassForm">
                 <label for="className">Class/Batch Name:</label>
