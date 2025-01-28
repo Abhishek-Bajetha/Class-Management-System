@@ -76,3 +76,63 @@ button:hover {
 .hidden {
   display: none;
 }
+
+/*date time*/
+/* Container for aligning the date and time inputs */
+.date-time-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 300px;
+    margin: auto;
+}
+
+/* Style for labels */
+.date-time-container label {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* General style for input fields */
+.date-time-container input[type="date"],
+.date-time-container input[type="time"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #555;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus state for input fields */
+.date-time-container input[type="date"]:focus,
+.date-time-container input[type="time"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Add hover effect to input fields */
+.date-time-container input[type="date"]:hover,
+.date-time-container input[type="time"]:hover {
+    border-color: #0056b3;
+}
+
+/* Optional: Style for container */
+.date-time-container {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Styling for a more polished look */
+.date-time-container label {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}

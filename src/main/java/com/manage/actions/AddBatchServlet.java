@@ -17,7 +17,7 @@ import java.sql.SQLException;
 @WebServlet("/AddBatch")
 public class AddBatchServlet extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         HttpSession session = req.getSession();
 
         String className = req.getParameter("className");
@@ -36,14 +36,10 @@ public class AddBatchServlet extends HttpServlet {
             preparedStatement.setString(4, teacherId);
             preparedStatement.executeUpdate();
 
-            PrintWriter out = resp.getWriter();
-            out.println("<h1>New Batch is created</h1>");
-            out.println(className);
-            out.println(classCode);
-        } catch (IOException | SQLException e) {
-            System.out.println("************************************");
-            System.out.println(e);
-            System.out.println("************************************");
+            resp.sendRedirect("success.jsp");
+
+        } catch (Exception e) {
+            resp.sendRedirect("error_message.jsp");
         }
     }
 }

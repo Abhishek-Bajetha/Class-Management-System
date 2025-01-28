@@ -38,8 +38,8 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Class Management System. All rights reserved.</p>
-    </footer>
+    <!--<footer class="footer">
+        <p>&copy; 2025 Class Management System. All rights reserved.<i>abhishek bajetha</i></p>
+    </footer> -->
 </body>
 </html>

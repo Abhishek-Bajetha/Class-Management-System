@@ -51,19 +51,14 @@
             </select>
 
             <!-- Select Time Slot -->
-            <label for="timeSlot">Select Time Slot:</label>
-            <select name="timeSlot" id="timeSlot" required>
-                <option value="">-- Select Time --</option>
-                <option value="09:00 AM">09:00 AM</option>
-                <option value="10:00 AM">10:00 AM</option>
-                <option value="11:00 AM">11:00 AM</option>
-                <option value="12:00 PM">12:00 PM</option>
-                <option value="01:00 PM">01:00 PM</option>
-                <option value="02:00 PM">02:00 PM</option>
-                <option value="03:00 PM">03:00 PM</option>
-                <option value="04:00 PM">04:00 PM</option>
-                <option value="05:00 PM">05:00 PM</option>
-            </select>
+           <div class="date-time-container">
+               <label for="eventDateTime">Select Date:</label>
+               <input type="date" id="eventDateTime" name="eventDate">
+
+               <label for="eventTime">Select Time:</label>
+               <input type="time" id="eventDateTime" name="eventTime">
+           </div>
+
 
             <!-- Submit Button -->
             <button type="submit" id="scheduleButton">Schedule Class</button>

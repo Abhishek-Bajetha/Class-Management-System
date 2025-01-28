@@ -32,15 +32,11 @@ public class EditStudentServlet extends HttpServlet {
             preparedStatement.setString(2, email);
             preparedStatement.executeUpdate();
 
-            PrintWriter out = resp.getWriter();
-            out.println("<h1>Hello this Page is add to new Student</h1>");
-            out.println("<p>" + classCode + "</p></br>");
-            out.println("<p>" + email + "</p></br>");
-            out.println("<p>" + name + "</p>");
+            resp.sendRedirect("success.jsp");
+
         } catch (SQLException e) {
-            System.out.println("************************************");
-            System.out.println(e);
-            System.out.println("************************************");
+            resp.sendRedirect("error_message.jsp");
+
         }
     }
 }

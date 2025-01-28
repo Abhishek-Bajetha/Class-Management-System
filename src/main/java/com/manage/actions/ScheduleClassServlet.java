@@ -18,22 +18,23 @@ public class ScheduleClassServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        String className = req.getParameter("classStandard");
-        String classCode = req.getParameter("classCode");
-        String teacherId = (String) session.getAttribute("teacherId");
-
+        String classCode = req.getParameter("classStandard");
+        String date = req.getParameter("eventDate");
+        String time = req.getParameter("eventTime");
+//        System.out.println(date + " " + time);
         try {
-            String query = "INSERT INTO classes (classname ,classcode ,detail ,teacherid) VALUES (?,?,?,?);";
+
+            String query = "UPDATE classes SET nextclass = ? WHERE classcode = ?;";
             Connection connection = DB.createConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, className);
+            preparedStatement.setString(1, date + " " + time);
             preparedStatement.setString(2, classCode);
-            preparedStatement.setString(4, teacherId);
             preparedStatement.executeUpdate();
+            resp.sendRedirect("success.jsp");
+
         } catch (SQLException e) {
-            System.out.println("************************************");
-            System.out.println(e);
-            System.out.println("************************************");
+            resp.sendRedirect("error_message.jsp");
+
         }
     }
 }
